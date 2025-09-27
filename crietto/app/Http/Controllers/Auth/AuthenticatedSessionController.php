@@ -28,7 +28,8 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended($this->redirectTo());
+        return redirect()->intended($this->redirectTo())
+            ->with('status', 'ログインに成功しました。ようこそ！');
     }
 
     public function destroy(Request $request)

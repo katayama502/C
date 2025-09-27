@@ -45,7 +45,8 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect()->intended($this->redirectTo($user));
+        return redirect()->intended($this->redirectTo($user))
+            ->with('status', 'アカウントの作成が完了しました。ようこそ！');
     }
 
     private function redirectTo(User $user): string
