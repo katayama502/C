@@ -27,7 +27,7 @@
             <option value="parent" @selected(old('role') === 'parent')>保護者</option>
         </select>
     </div>
-    <button class="w-full bg-indigo-600 text-white py-2 rounded">登録する</button>
+    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 focus:bg-indigo-700 active:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-white text-white py-2 rounded transition-colors duration-200">登録する</button>
 </form>
 <div class="mt-4 text-center text-sm">
     <a class="text-indigo-600 hover:underline" href="{{ route('login') }}">すでにアカウントをお持ちですか？</a>

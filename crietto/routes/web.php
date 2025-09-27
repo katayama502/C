@@ -16,7 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [StudentDashboardController::class, 'index'])
         ->middleware('can:view-student-dashboard')->name('student.dashboard');
 
